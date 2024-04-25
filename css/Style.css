@@ -1,0 +1,223 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+section{
+    position: relative;
+    padding: 40px;
+    
+} 
+
+a{
+    text-decoration: none;
+} */
+
+/* ------------------------------------Nvar----------------------------------------- */
+
+
+
+
+
+
+
+
+/* -------------------------------------Carusel------------------------------------- */
+
+
+
+/* Secciones principales */
+
+.container-secciones {
+    width: 100%;
+    position: relative;
+}
+
+.container-secciones .row-secciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container-secciones .row-secciones .columna-secciones {
+    position: relative;
+    width: 50%;
+    height: calc(100vh - 120px);
+    text-align: center;
+
+}
+
+.container-secciones .row-secciones .columna-secciones img {
+    width: 98%;
+    height: 98%;
+    object-fit: cover;
+}
+
+.etica h3 {
+    font-size: 2rem;
+}
+
+.etica p {
+    font-size: 1.5rem;
+    padding: 30px;
+}
+
+.etica {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.container-secciones .row-secciones .columna-secciones .capa-btn {
+    position: absolute;
+    width: 100%;
+    bottom: 15%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.capa-btn a {
+    display: inline;
+    border: 1px black solid;
+    padding: 15px 30px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 1s ease;
+    font-variant: small-caps;
+}
+
+.capa-btn a:hover {
+    color: white;
+    background-color: black;
+}
+
+.fondo-contacto {
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+.fondo-contacto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media(max-width:700px) {
+    .container-secciones .row-secciones .columna-secciones {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------footer------------------------------------- */
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer .sci{
+    position: relative;
+    display: flex;
+}
+
+.footer .sci li{
+    list-style: none;
+}
+
+.footer .sci li a{
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+.footer .sci li a img{
+    filter: invert(1);
+    max-width: 40px;
+}
+
+.copyrightText{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    color:#fff;
+    text-align: center;
+}
+
+.copyrightText a{
+    text-decoration: none;
+    color: #F9C4C4;
+}
+
+/*boton de whatsapp*/
+.appWhatsapp{
+    position: fixed;
+    right: 80px;
+    bottom: 15px;
+    width : 10px;
+    z-index : 1000;
+}
+
+
+
+
+
+
+
+/* -------------------------------------responsive------------------------------------- */
+@media(max-width: 769px){
+    
+    section {
+        padding: 30px;
+    }
+
+    .footer .sci li a img {
+        filter: invert(1);
+        max-width: 30px;
+    }
+    
+
+    .appWhatsapp{
+        position: fixed;
+        right: 60px;
+        bottom: 15px;
+        width : 3px;
+        z-index : 1000;
+    }
+
+    .appWhatsapp img{
+        width: 45px;
+    }
+
+
+}
+
+

@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css?family=Sofia");
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2 {
+    font-family: "Sofia",
+        sans-serif;
+}
+
+
+
+
+
+/* //priemra Separacion  de la seccion.*/
+.banner {
+    width: 100%;
+}
+
+
+
+.info-contacto {
+    padding: 10%;
+}
+
+
+
+/* -------------------------------------footer------------------------------------- */
+
+section {
+    position: relative;
+    padding: 40px;
+
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer .sci {
+    position: relative;
+    display: flex;
+}
+
+.footer .sci li {
+    list-style: none;
+}
+
+.footer .sci li a {
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+.footer .sci li a img {
+    filter: invert(1);
+    max-width: 40px;
+}
+
+.copyrightText {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+}
+
+.copyrightText a {
+    text-decoration: none;
+    color: #F9C4C4;
+}
+
+/*boton de whatsapp*/
+.appWhatsapp {
+    position: fixed;
+    right: 80px;
+    bottom: 15px;
+    width: 10px;
+    z-index: 1000;
+}
+
+/* -------------------------------------responsive------------------------------------- */
+@media(max-width: 769px) {
+
+    section {
+        padding: 30px;
+    }
+
+    .footer .sci li a img {
+        filter: invert(1);
+        max-width: 30px;
+    }
+
+
+    .appWhatsapp {
+        position: fixed;
+        right: 60px;
+        bottom: 15px;
+        width: 3px;
+        z-index: 1000;
+    }
+
+    .appWhatsapp img {
+        width: 45px;
+    }
+
+
+}
