@@ -1,4 +1,5 @@
 
+
 *{
     margin: 0;
     padding: 0;
@@ -109,11 +110,7 @@ a{
     object-fit: cover;
 }
 
-@media(max-width:700px) {
-    .container-secciones .row-secciones .columna-secciones {
-        width: 100%;
-    }
-}
+
 
 
 
@@ -217,7 +214,33 @@ a{
         width: 45px;
     }
 
+        .container-secciones .row-secciones .columna-secciones {
+            width: 100%;
+            /* Ajustar el ancho de la columna al 100% en dispositivos móviles */
+            height: auto;
+            /* Cambiar la altura a automático para que se ajuste al contenido */
+            text-align: center;
+            /* Centrar el contenido en dispositivos móviles */
+        }
+    
+        .etica h3 {
+            margin-top: 20px;
+            /* Agregar un margen superior al texto h3 */
+        }
+    
+        .etica p {
+            padding: 10px;
+            /* Reducir el padding del párrafo si es necesario */
+        }
+    
+        .container-secciones .row-secciones .columna-secciones img {
+            width: 100%;
+            /* Ajustar el ancho de la imagen al 100% en dispositivos móviles */
+            height: auto;
+            /* Cambiar la altura a automático para que se ajuste al contenido */
+        }
+
+
+
 
 }
-
-
