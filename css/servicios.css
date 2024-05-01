@@ -270,7 +270,14 @@
 
 
 
-
+/* Estilos cuando el mouse está sobre el enlace */
+.menu1 li:hover a {
+    color: #FF5733;
+    /* Cambia el color del texto cuando el mouse está sobre él */
+    transition: color 0.3s ease;
+    /* Agrega una transición suave al cambio de color */
+    cursor: pointer;
+}
 
 
 
