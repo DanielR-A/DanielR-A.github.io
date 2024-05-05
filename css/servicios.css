@@ -5,6 +5,9 @@
     font-family: 'Open Sans';
 }
 
+.menu1 li a:hover {
+    text-decoration: underline;
+}
 
 .contenedor{
     max-width: 1200px;
