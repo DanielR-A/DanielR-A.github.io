@@ -1,31 +1,15 @@
-
-.fondo-contacto img{
-
-height: auto;
-}
 .content{
     padding-top: 10px
     ;
 }
 
-.custom-carousel-width {
-    max-width: 10%;
-    /* Ajusta el valor según tus necesidades */
-    margin: 0 auto;
-    /* Para centrar el carrusel en la página */
-}
 
-/* .content ul {
-    list-style: none;
-    padding: 0;
-} */
-
-.logo {
+.logo8 {
     text-align: center;
     font-size: 3em;
 }
 
-.logo span {
+.logo8 span {
     color: #B70E21;
 }
 
@@ -122,99 +106,3 @@ height: auto;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* -------------------------------------footer------------------------------------- */
-
-section {
-    position: relative;
-    padding: 40px;
-
-}
-
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: black;
-    font-family: 'Raleway', sans-serif;
-}
-
-.footer .sci {
-    position: relative;
-    display: flex;
-}
-
-.footer .sci li {
-    list-style: none;
-}
-
-.footer .sci li a {
-    text-decoration: none;
-    margin: 0 20px;
-}
-
-.footer .sci li a img {
-    filter: invert(1);
-    max-width: 40px;
-}
-
-.copyrightText {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: 300;
-    color: #fff;
-    text-align: center;
-}
-
-.copyrightText a {
-    text-decoration: none;
-    color: #F9C4C4;
-}
-
-/*boton de whatsapp*/
-.appWhatsapp {
-    position: fixed;
-    right: 80px;
-    bottom: 15px;
-    width: 10px;
-    z-index: 1000;
-}
-
-/* -------------------------------------responsive------------------------------------- */
-@media(max-width: 769px) {
-
-    section {
-        padding: 30px;
-    }
-
-    .footer .sci li a img {
-        filter: invert(1);
-        max-width: 30px;
-    }
-
-
-    .appWhatsapp {
-        position: fixed;
-        right: 60px;
-        bottom: 15px;
-        width: 3px;
-        z-index: 1000;
-    }
-
-    .appWhatsapp img {
-        width: 45px;
-    }
-
-
-}
