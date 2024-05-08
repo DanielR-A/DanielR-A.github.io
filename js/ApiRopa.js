@@ -38,7 +38,7 @@ function cargarImagenes() {
             <img  src="${ropa[i].imagen} alt="" class="img-item">
             <span class="precio-item">
             ${ropa[i].precio}</span>
-            <button class="boton-item">Agregar al Carrito</button>
+            <button class="boton-item">Rent</button>
         </div>
           `;
   }
