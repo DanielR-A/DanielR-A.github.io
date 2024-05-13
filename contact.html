@@ -54,13 +54,13 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="img/pv.jpg" class="d-block w-100" alt="...">
+            <img src="img/pv.jpg" class="d-block w-100" alt="..." style="height: 550px; object-fit: cover;">
         </div>
         <div class="carousel-item">
-            <img src="img/Puerto-Viejo.jpg" class="d-block w-100" alt="...">
+            <img src="img/Puerto-Viejo.jpg" class="d-block w-100" alt="..." style="height: 550px; object-fit: cover;">
         </div>
         <div class="carousel-item">
-            <img src="img/pv.jpg" class="d-block w-100" alt="...">
+            <img src="img/pv.jpg" class="d-block w-100" alt="..." style="height: 550px; object-fit: cover;">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -73,8 +73,13 @@
     </a>
 </div>
 
+<script>
+    $(document).ready(function () {
+        $('#carouselExampleIndicators').carousel();
+    });
+</script>
 
-<br>
+
 
 <style>
     #map {
@@ -83,7 +88,11 @@
     }
 </style>
 
-    <div id="map"></div>
+<div>
+    <h1 class="logo8">Ubicaciones de los locales <span>Locales</span></h1>
+</div>
+
+    <div id="map" style="margin-top: 20px;">
     <script>
         function initMap() {
             // Coordenadas de Stanford's y Supermercado Diamante
@@ -102,17 +111,11 @@
     <!-- Cargar la API de Google Maps -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUAkoaWW27Js3TI4iQuPawetzaz8_L944&libraries=geometry&callback=initMap"></script>
 
+</div>
 
 
 
 
-
-
-
-
-
-
-    
     <div class="content">
 
         <h1 class="logo8">Contact <span>Us</span></h1>
@@ -152,7 +155,7 @@
                 <h4>Más Información</h4>
                 <ul>
                     <li><i class="fas fa-map-marker-alt"></i> Cocles Puerto Viejo</li>
-                    <li><i class="fas fa-phone"></i> (+506)8746 1562</li>
+                    <li><i class="fas fa-phone"></i> (+506)645895412</li>
                     <li><i class="fas fa-envelope-open-text"></i> stanfdepv@gmail.com</li>
                 </ul>
                 <p>"¿Tienes alguna pregunta sobre nuestros productos o servicios? Ponte en contacto con nosotros hoy
@@ -189,10 +192,10 @@
             </li>
         </ul>
         <a target="_blank" class="appWhatsapp"
-         href="https://api.whatsapp.com/send?phone=50687461562&text=Hola Stanf de Pv,%20estoy%20interesad@%20en%20el%20Local%20de%20deAlquiler">
+         href="https://api.whatsapp.com/send?phone=50683469038&text=Hola Stanf de Pv,%20estoy%20interesad@%20en%20el%20Local%20de%20deAlquiler">
             <img src="./img/whatsapp.webp" alt="icono de whatsapp">
         </a>
-        <h4 class="copyrightText">Copyright ©2024 <a href="https://github.com" target="_blank">Daniel Rodríguez
+        <h4 class="copyrightText">Copyright ©2023 <a href="https://github.com" target="_blank">Daniel Rodríguez
                 Aguilar</a>.
             All rights reserved.</h4>
     </section>
