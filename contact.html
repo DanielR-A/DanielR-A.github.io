@@ -73,6 +73,18 @@
     </a>
 </div>
 
+
+<style>
+    @media (max-width: 768px) {
+        #carouselExampleIndicators .carousel-item img {
+            height: 250px !important;
+            /* Ajusta la altura deseada para dispositivos móviles */
+            object-fit: cover;
+        }
+    }
+</style>
+    
+
 <script>
     $(document).ready(function () {
         $('#carouselExampleIndicators').carousel();
