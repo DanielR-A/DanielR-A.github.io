@@ -74,6 +74,45 @@
 </div>
 
 
+<br>
+
+<style>
+    #map {
+        height: 400px;
+        width: 100%;
+    }
+</style>
+
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            // Coordenadas de Stanford's y Supermercado Diamante
+           var stanfords = { lat: 9.6585182, lng: -82.7522657 };
+           var diamante = { lat: 9.6579349, lng: -82.7522635 };
+
+            // Crear el mapa
+            var map = new google.maps.Map(
+                document.getElementById('map'), { zoom: 15, center: stanfords });
+
+            // Agregar marcadores
+            var markerStanfords = new google.maps.Marker({ position: stanfords, map: map, title: 'Stanford\'s' });
+            var markerDiamante = new google.maps.Marker({ position: diamante, map: map, title: 'Supermercado Diamante' });
+        }
+    </script>
+    <!-- Cargar la API de Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUAkoaWW27Js3TI4iQuPawetzaz8_L944&libraries=geometry&callback=initMap"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
     <div class="content">
 
         <h1 class="logo8">Contact <span>Us</span></h1>
