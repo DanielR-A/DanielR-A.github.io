@@ -27,7 +27,6 @@
                 <li><a href="About.html">About</a></li>
                 <li><a href="Servicos.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
-    
             </ul>
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
@@ -38,167 +37,94 @@
     <div class="fondo-contacto">
         <img src="img/2.jpg">
     </div>
+    <!-- ----------------------------------------------------------------------------------------- -->
 
 
-    
 
-       <style>
-        .menu1 li a {
-            text-decoration: none;
-            /* Elimina el subrayado del enlace */
-        }
-    
-        .menu1 li a span {
-            margin: 0 5px; /* Agrega un margen de 5px a cada lado del símbolo "/" */
-           
-        }
-
-           .menu1 li a,
-    .menu1 li a span {
-        font-size: 18px; /* Ajusta el tamaño de la fuente */
-    }
-           
-    </style>
-    
     <div class="filtro">
-            <ul class="menu1">
-                <li>
-                    <a href="Servicos.html">Grandes <span>  / </span> </a>
-                </li>
-
-                <li>
-                  
-                    <a href="#" onclick="callService()"> Frente al Mar</a>
-                </li>
-            </ul>
+        <ul class="menu1">
+            <li>
+                <a href="Servicos.html">Grandes <span> / </span> </a>
+            </li>
+            <li>
+                <a href="#" onclick="callService()"> Frente al Mar</a>
+            </li>
+        </ul>
     </div>
 
+    <!-- -----------------------------rrrellenar con Api--------------------- -->
 
 
-<!-- -----------------------------rrrellenar con Api--------------------- -->
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="contenedor">
-    <!-- Contenedor de elementos -->
-    <div class="contenedor-items" id="contenedor-items">
-        <div class="item">
-            <span class="titulo-item">LCP1</span>
-            <img src="img/local3.jpeg" alt="" class="img-item">
-            <span class="precio-item">$1.000</span>
-            <button class="boton-item">rent</button>
-        </div>
-        <div class="item">
-            <span class="titulo-item">LCP2</span>
-            <img src="img/local4.jpeg" alt="" class="img-item">
-            <span class="precio-item">$500</span>
-            <button class="boton-item">rent</button>
-        </div>
-        <!-- <div class="item">
-            <span class="titulo-item">Knock Nap</span>
-            <img src="img/M3.webp" alt="" class="img-item">
-            <span class="precio-item">$35.000</span>
-            <button class="boton-item">Agregar al Carrito</button>
-        </div> -->
-        <!-- <div class="item">
-            <span class="titulo-item">La Night</span>
-            <img src="img/H1.jpg" alt="" class="img-item">
-            <span class="precio-item">$18.000</span>
-            <button class="boton-item">Agregar al Carrito</button>
-        </div> -->
-        <!-- <div class="item">
-            <span class="titulo-item">Silver All</span>
-            <img src="img/H2.jfif" alt="" class="img-item">
-            <span class="precio-item">$32.000</span>
-            <button class="boton-item">Agregar al Carrito</button>
-        </div>
-        <div class="item">
-            <span class="titulo-item">Skin Glam</span>
-            <img src="img/H3.jpg" alt="" class="img-item">
-            <span class="precio-item">$18.000</span>
-            <button class="boton-item">Agregar al Carrito</button>
-        </div>
-        <div class="item">
-            <span class="titulo-item">Midimix</span>
-            <img src="img/M4.png" alt="" class="img-item">
-            <span class="precio-item">$54.000</span>
-            <button class="boton-item">Agregar al Carrito</button>
-        </div>
-        <div class="item">
-            <span class="titulo-item">Sir Blue</span>
-            <img src="img/M5.png" alt="" class="img-item">
-            <span class="precio-item">$32.000</span>
-            <button class="boton-item">Agregar al Carrito</button>
-        </div>
-        <div class="item">
-            <span class="titulo-item">Middlesteel</span>
-            <img src="img/H5.webp" alt="" class="img-item">
-            <span class="precio-item">$42.800</span>
-            <button class="boton-item">Agregar al Carrito</button>
-        </div> -->
-    </div>
-
-
-
-
-
-
-
-
-    <!-- Carrito de Compras -->
-    <!-- <div class="carrito" id="carrito">
-        <div class="header-carrito">
-            <h2>Tu Carrito</h2>
-        </div>
-
-        <div class="carrito-items">
-
-        </div> -->
-        <!-- <div class="carrito-total">
-            <div class="fila">
-                <strong>Tu Total</strong>
-                <span class="carrito-precio-total">
-                    $120.000,00
-                </span>
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items" id="contenedor-items">
+            <!-- Modal for Service 1 -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal1')">&times;</span>
+                    <h2>Service 1 Details</h2>
+                    <div class="modal-images">
+                        <img src="img/2.jpg" alt="Image 1">
+                        <img src="img/22.png" alt="Image 2">
+                    </div>
+                    <p>Baños 1</p>
+                    <p>Tamaño:</p>
+                    <p>Precio:</p>
+                </div>
             </div>
-            <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
-        </div> -->
-    </div>
-</section>
 
+            <!-- Item 1 -->
+            <div class="item">
+                <span class="titulo-item">LCP1</span>
+                <img src="img/local3.jpeg" alt="" class="img-item">
+                <span class="precio-item">$1.000</span>
+                <button class="boton-item" onclick="openModal('modal1')">rent</button>
+            </div>
 
+            <!-- Modal for Service 2 -->
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal2')">&times;</span>
+                    <h2>Service 2 Details</h2>
+                    <div class="modal-images">
+                        <img src="img/github.webp" alt="Image 1">
+                        <img src="img/facebook.webp" alt="Image 2">
+                    </div>
+                    <p>Calle Principal: Sí</p>
+                    <p>Baños 1</p>
+                    <p>Tamaño:</p>
+                    <p>Precio:</p>
+                </div>
+            </div>
 
+            <!-- Item 2 -->
+            <div class="item">
+                <span class="titulo-item">LCP2</span>
+                <img src="img/local4.jpeg" alt="" class="img-item">
+                <span class="precio-item">$500</span>
+                <button class="boton-item" onclick="openModal('modal2')">rent</button>
+            </div>
+        </div>
+    </section>
 
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
 
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
 
+        window.onclick = function (event) {
+            if (event.target.classList.contains('modal')) {
+                closeModal(event.target.id);
+            }
+        }
+    </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--Footer-->
+    <!-----------------------------------------Footer------------------------------------------>
     <section class="footer" id="links">
         <ul class="sci">
             <li>
@@ -218,7 +144,7 @@
             </li>
         </ul>
         <a target="_blank" class="appWhatsapp"
-             href="https://api.whatsapp.com/send?phone=50687461562&text=Hola Stanf de Pv,%20estoy%20interesad@%20en%20el%20Local%20de%20deAlquiler">
+            href="https://api.whatsapp.com/send?phone=50687461562&text=Hola Stanf de Pv,%20estoy%20interesad@%20en%20el%20Local%20de%20deAlquiler">
             <img src="./img/whatsapp.webp" alt="icono de whatsapp">
         </a>
         <h4 class="copyrightText">Copyright ©2024 <a href="https://github.com" target="_blank">Daniel Rodríguez
@@ -231,6 +157,7 @@
     <script src="js/main.js"></script>
     <script src="js/app.js" async></script>
     <script src="js/ApiRopa.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
