@@ -17,6 +17,12 @@
     justify-content: space-between;
     /* oculto lo que queda fuera del .contenedor */
     contain: paint;
+
+    flex-direction: column;
+        align-items: center;
+    align-items: center;
+        margin: 20% 0;
+        /* Margen arriba y abajo */
 }
 /* SECCION CONTENEDOR DE ITEMS */
 .contenedor .contenedor-items{
