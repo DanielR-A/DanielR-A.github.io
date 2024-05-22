@@ -41,7 +41,7 @@
 
 .contenedor .contenedor-items .item:hover {
     box-shadow: 0 0 10px #666;
-    scale: 1.05;
+    transform: scale(1.05);
 }
 
 .contenedor .contenedor-items .item .titulo-item {
@@ -73,9 +73,10 @@
     .contenedor {
         display: block;
     }
+
     .contenedor-items {
         width: 100% !important;
-    } 
+    }
 }
 
 .modal {
@@ -88,18 +89,22 @@
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
-    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content {
     width: 80%;
     background-color: #dadee3;
-    margin: 5% auto;
+    margin: auto;
     padding: 20px;
     border: 1px solid #888;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
 }
 
 .close {
@@ -118,16 +123,16 @@
 
 .modal-images {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     gap: 10px;
+    margin-bottom: 20px;
 }
 
 .modal-images img {
     width: 100px;
     height: auto;
-    margin-right: 10px;
     border-radius: 5px;
     transition: transform 0.2s;
 }
@@ -247,6 +252,5 @@
 
     .modal-images img {
         width: 80px;
-        margin-right: 5px;
     }
 }
