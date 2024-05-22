@@ -129,6 +129,9 @@
 }
 
 .modal-content {
+      padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 100% !important;
     background-color: #fefefe;
     margin: 5% auto;
     padding: 20px;
