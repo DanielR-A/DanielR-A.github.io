@@ -53,11 +53,7 @@
     </div>
 
     <!-- -----------------------------rrrellenar con Api--------------------- -->
-
-
     <section class="contenedor">
-        <!-- Contenedor de elementos -->
-        <!-- Contenedor de elementos -->
         <div class="contenedor-items" id="contenedor-items">
             <!-- Modal for Service 1 -->
             <div id="modal1" class="modal">
@@ -108,22 +104,29 @@
         </div>
     </section>
 
+
     <script>
+        // Ocultamos todos los modales al iniciar la aplicación
+        const modals = document.querySelectorAll('.modal');
+        modals.forEach(modal => modal.style.display = 'none');
+
         function openModal(modalId) {
-            document.getElementById(modalId).style.display = "block";
+            // Mostramos el modal correspondiente al botón clicado
+            document.getElementById(modalId).style.display = "flex";
         }
 
         function closeModal(modalId) {
+            // Cerramos el modal clicado
             document.getElementById(modalId).style.display = "none";
         }
 
         window.onclick = function (event) {
+            // Si se hace clic fuera del contenido del modal, cerramos el modal
             if (event.target.classList.contains('modal')) {
                 closeModal(event.target.id);
             }
         }
     </script>
-
     <!-----------------------------------------Footer------------------------------------------>
     <section class="footer" id="links">
         <ul class="sci">
