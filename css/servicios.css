@@ -1,41 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
-*{
+
+* {
     margin: 0;
-    padding:0;
-    font-family: 'Open Sans';
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.menu1 li a:hover {
-    text-decoration: underline;
-}
-
-.contenedor{
+.contenedor {
     max-width: 1200px;
     padding: 10px;
-    margin: auto;
+    margin: 20% auto;
     display: flex;
-    justify-content: space-between;
-    /* oculto lo que queda fuera del .contenedor */
-    contain: paint;
-
     flex-direction: column;
-        align-items: center;
     align-items: center;
-        margin: 20% 0;
-        /* Margen arriba y abajo */
+    justify-content: space-between;
+    contain: paint;
 }
-/* SECCION CONTENEDOR DE ITEMS */
-.contenedor .contenedor-items{
+
+.contenedor .contenedor-items {
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    grid-gap:30px;
-    grid-row-gap: 30px;
-    /* width: 60%; */
+    grid-gap: 30px;
     width: 100%;
     transition: .3s;
 }
-.contenedor .contenedor-items .item{
+
+.contenedor .contenedor-items .item {
     max-width: 200px;
     margin: auto;
     border: 1px solid #666;
@@ -43,27 +34,31 @@
     padding: 20px;
     transition: .3s;
 }
-.contenedor .contenedor-items .item .img-item{
+
+.contenedor .contenedor-items .item .img-item {
     width: 100%;
 }
-.contenedor .contenedor-items .item:hover{
+
+.contenedor .contenedor-items .item:hover {
     box-shadow: 0 0 10px #666;
     scale: 1.05;
 }
-.contenedor .contenedor-items .item .titulo-item{
+
+.contenedor .contenedor-items .item .titulo-item {
     display: block;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
 }
-.contenedor .contenedor-items .item .precio-item{
+
+.contenedor .contenedor-items .item .precio-item {
     display: block;
     text-align: center;
     font-weight: bold;
     font-size: 22px;
 }
 
-.contenedor .contenedor-items .item .boton-item{
+.contenedor .contenedor-items .item .boton-item {
     display: block;
     margin: 10px auto;
     border: none;
@@ -74,46 +69,15 @@
     cursor: pointer;
 }
 
-/* SECCION RESPONSIVE */
 @media screen and (max-width: 850px) {
     .contenedor {
-    display: block;
+        display: block;
     }
-    .contenedor-items{
+    .contenedor-items {
         width: 100% !important;
     } 
 }
 
-
-
-
-
-
-
-
-/* ----------------------------Menu------------------------------------- */
-                .menu1 li a {
-                    text-decoration: none;
-                    /* Elimina el subrayado del enlace */
-                }
-        
-                .menu1 li a span {
-                    margin: 0 5px;
-                    /* Agrega un margen de 5px a cada lado del símbolo "/" */
-                }
-        
-                .menu1 li a,
-                .menu1 li a span {
-                    font-size: 18px;
-                    /* Ajusta el tamaño de la fuente */
-                }
-/* ----------------------------------------------------------- */
-
-
-
-
-
-/* Estilos para el modal */
 .modal {
     display: none;
     position: fixed;
@@ -124,21 +88,18 @@
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
-    /* Fondo negro con opacidad */
     padding-top: 60px;
 }
 
 .modal-content {
-      padding-left: 0 !important;
-  padding-right: 0 !important;
-  width: 100% !important;
-    background-color: #fefefe;
+    width: 80%;
+    background-color: #dadee3;
     margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    max-width: 90%;
 }
 
 .close {
@@ -155,27 +116,13 @@
     text-decoration: none;
 }
 
-
-
-
-
-
 .modal-images {
-    /* position: relative; */
-    /* Posicionamiento relativo para imágenes */
-    /* overflow: hidden; */
-    /* Oculta el contenido que se desborde */
     display: flex;
-    /* Usa flexbox para alinear las imágenes */
     justify-content: center;
-    /* Centra las imágenes horizontalmente */
     align-items: center;
-    /* Centra las imágenes verticalmente */
-    height: 100%;
-    /* Altura del contenedor igual a la del modal */
+    flex-wrap: wrap;
+    gap: 10px;
 }
-
-
 
 .modal-images img {
     width: 100px;
@@ -189,57 +136,6 @@
     transform: scale(1.1);
 }
 
-
-/* Estilos para las imágenes dentro del modal */
-.modal-images img {
-    width: 100px;
-    /* Tamaño fijo para las imágenes */
-    height: auto;
-    /* Altura automática para mantener la proporción */
-    margin-right: 10px;
-    /* Espacio entre las imágenes */
-    border-radius: 5px;
-    /* Bordes redondeados */
-    transition: transform 0.2s;
-    /* Transición suave */
-}
-
-/* Efecto de zoom al pasar el mouse */
-.modal-images img:hover {
-    transform: scale(4.0);
-    /* Aumentar en un 10% al pasar el mouse */
-    border-color: #070707;
-    /* Cambia el color del borde al pasar el mouse */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Busqueda blog */
-
-
-
 .filtro1 {
     width: 100%;
     display: flex;
@@ -251,49 +147,31 @@
     list-style: none;
 }
 
-
-
 @media(max-width:500px) {
     .filtro1 {
         flex-direction: column;
-        padding-top: 10px 10px 10px 10px;
-        
+        padding: 10px;
     }
-    
-
 }
 
-.menu1{
+.menu1 {
     list-style: none;
     display: flex;
-        
 }
 
+.menu1 li a {
+    text-decoration: none;
+    font-size: 18px;
+}
 
-
-/* Estilos cuando el mouse está sobre el enlace */
-.menu1 li:hover a {
+.menu1 li a:hover {
     color: #FF5733;
-    /* Cambia el color del texto cuando el mouse está sobre él */
     transition: color 0.3s ease;
-    /* Agrega una transición suave al cambio de color */
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-/* -------------------------------------footer------------------------------------- */
-
-section {
-    position: relative;
-    padding: 40px;
-
+.menu1 li a span {
+    margin: 0 5px;
 }
 
 .footer {
@@ -303,10 +181,10 @@ section {
     flex-direction: column;
     background-color: black;
     font-family: 'Raleway', sans-serif;
+    padding: 40px;
 }
 
 .footer .sci {
-    position: relative;
     display: flex;
 }
 
@@ -337,7 +215,6 @@ section {
     color: #F9C4C4;
 }
 
-/*boton de whatsapp*/
 .appWhatsapp {
     position: fixed;
     right: 80px;
@@ -346,30 +223,30 @@ section {
     z-index: 1000;
 }
 
-/* -------------------------------------responsive------------------------------------- */
 @media(max-width: 769px) {
-
     section {
         padding: 30px;
     }
 
     .footer .sci li a img {
-        filter: invert(1);
         max-width: 30px;
     }
 
-
     .appWhatsapp {
-        position: fixed;
         right: 60px;
-        bottom: 15px;
         width: 3px;
-        z-index: 1000;
     }
 
     .appWhatsapp img {
         width: 45px;
     }
 
+    .modal-content {
+        width: 95%;
+    }
 
+    .modal-images img {
+        width: 80px;
+        margin-right: 5px;
+    }
 }
