@@ -41,28 +41,28 @@
 
 
 
-    <div class="filtro">
-        <ul class="menu1">
-            <li>
-                <a href="Servicos.html">Locales <span> / </span> </a>
-            </li>
-            <li>
-                <a href="#" onclick="callService()"> Frente al Mar</a>
-            </li>
-        </ul>
-    </div>
-
     <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
     <section class="contenedor">
-        <div class="contenedor-items" id="contenedor-items">
+        <div class="filtro">
+            <ul class="menu1">
+                <li>
+                    <a href="#" onclick="showCategory(event, 'locales')" id="locales-link">Locales <span> / </span> </a>
+                </li>
+                <li>
+                    <a href="#" onclick="showCategory(event, 'frenteAlMar')" id="frenteAlMar-link">Frente al Mar</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="contenedor-items locales" id="contenedor-items-locales">
             <!-- Modal for Service 1 -->
             <div id="modal1" class="modal">
                 <div class="modal-content">
                     <span class="close" onclick="closeModal('modal1')">&times;</span>
                     <h2>Service 1 Details</h2>
                     <div class="modal-images">
-                        <img src="img/2.jpg" alt="Image 1">
-                        <img src="img/22.png" alt="Image 2">
+                        <img src="img/2.jpg" alt="Image 1" class="modal-image">
+                        <img src="img/22.png" alt="Image 2" class="modal-image">
                     </div>
                     <p>Baños 1</p>
                     <p>Tamaño:</p>
@@ -84,8 +84,8 @@
                     <span class="close" onclick="closeModal('modal2')">&times;</span>
                     <h2>Service 2 Details</h2>
                     <div class="modal-images">
-                        <img src="img/github.webp" alt="Image 1">
-                        <img src="img/facebook.webp" alt="Image 2">
+                        <img src="img/github.webp" alt="Image 1" class="modal-image">
+                        <img src="img/facebook.webp" alt="Image 2" class="modal-image">
                     </div>
                     <p>Calle Principal: Sí</p>
                     <p>Baños 1</p>
@@ -104,15 +104,15 @@
         </div>
 
         <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
-        <div class="contenedor-items" id="contenedor-items">
+        <div class="contenedor-items frenteAlMar" id="contenedor-items-frenteAlMar" style="display: none;">
             <!-- Modal for Service 3 -->
             <div id="modal3" class="modal">
                 <div class="modal-content">
                     <span class="close" onclick="closeModal('modal3')">&times;</span>
                     <h2>Service 3 Details</h2>
                     <div class="modal-images">
-                        <img src="img/2.jpg" alt="Image 1">
-                        <img src="img/22.png" alt="Image 2">
+                        <img src="img/2.jpg" alt="Image 1" class="modal-image">
+                        <img src="img/22.png" alt="Image 2" class="modal-image">
                     </div>
                     <p>Baños 1</p>
                     <p>Tamaño:</p>
@@ -134,8 +134,8 @@
                     <span class="close" onclick="closeModal('modal4')">&times;</span>
                     <h2>Service 4 Details</h2>
                     <div class="modal-images">
-                        <img src="img/github.webp" alt="Image 1">
-                        <img src="img/facebook.webp" alt="Image 2">
+                        <img src="img/github.webp" alt="Image 1" class="modal-image">
+                        <img src="img/facebook.webp" alt="Image 2" class="modal-image">
                     </div>
                     <p>Calle Principal: Sí</p>
                     <p>Baños 1</p>
@@ -152,28 +152,76 @@
                 <button class="boton-item" onclick="openModal('modal4')">rent</button>
             </div>
         </div>
+
+
     </section>
 
+    <div id="image-modal" class="image-modal">
+        <span class="close" onclick="closeImageModal()">&times;</span>
+        <img id="modal-image" src="" alt="Expanded Image">
+    </div>
 
     <script>
-        // Ocultamos todos los modales al iniciar la aplicación
+        // JavaScript to handle modal display
         const modals = document.querySelectorAll('.modal');
         modals.forEach(modal => modal.style.display = 'none');
 
         function openModal(modalId) {
-            // Mostramos el modal correspondiente al botón clicado
             document.getElementById(modalId).style.display = "flex";
         }
 
         function closeModal(modalId) {
-            // Cerramos el modal clicado
             document.getElementById(modalId).style.display = "none";
         }
 
         window.onclick = function (event) {
-            // Si se hace clic fuera del contenido del modal, cerramos el modal
             if (event.target.classList.contains('modal')) {
                 closeModal(event.target.id);
+            }
+        }
+
+        function showCategory(event, category) {
+            event.preventDefault();
+            const localesContainer = document.getElementById('contenedor-items-locales');
+            const frenteAlMarContainer = document.getElementById('contenedor-items-frenteAlMar');
+            const localesLink = document.getElementById('locales-link');
+            const frenteAlMarLink = document.getElementById('frenteAlMar-link');
+
+            if (category === 'locales') {
+                localesContainer.style.display = 'flex';
+                frenteAlMarContainer.style.display = 'none';
+                localesLink.classList.add('selected');
+                frenteAlMarLink.classList.remove('selected');
+            } else if (category === 'frenteAlMar') {
+                localesContainer.style.display = 'none';
+                frenteAlMarContainer.style.display = 'flex';
+                localesLink.classList.remove('selected');
+                frenteAlMarLink.classList.add('selected');
+            }
+        }
+
+        // JavaScript to handle image modal display for full-screen view
+        const imageModal = document.getElementById('image-modal');
+        const modalImage = document.getElementById('modal-image');
+
+        function openImageModal(imageElement) {
+            modalImage.src = imageElement.src;
+            imageModal.style.display = 'flex';
+        }
+
+        function closeImageModal() {
+            imageModal.style.display = 'none';
+        }
+
+        document.querySelectorAll('.modal-image').forEach(img => {
+            img.addEventListener('click', function () {
+                openImageModal(this);
+            });
+        });
+
+        window.onclick = function (event) {
+            if (event.target === imageModal) {
+                closeImageModal();
             }
         }
     </script>
