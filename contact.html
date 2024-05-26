@@ -135,31 +135,39 @@
         <div class="contact-wrapper animated bounceInUp">
             <div class="contact-form">
                 <h3>Contact us</h3>
-            <form action="https://formsubmit.co/stanfdepv@gmail.com" method="POST">
-                <p>
-                    <label>Nombre y Apellidos</label>
-                    <input type="text" id="nomesobrenome" class="input-padrao" required name="full_name">
-                </p>
-                <p>
-                    <label>Email </label>
-                    <input type="email" id="email" class="input-padrao" required placeholder="juanperez@dominio.com" name="email">
-                </p>
-                <p>
-                    <label>Teléfono</label>
-                    <input type="tel" id="telefone" class="input-padrao" required placeholder="(XXX) XXXX-XXXX" name="phone">
-                </p>
-                <p>
-                    <label>Producto a consultar</label>
-                    <input type="text" name="product">
-                </p>
-                <p class="block">
-                    <label>Mensaje</label>
-                    <textarea cols="70" rows="10" id="mensagem" class="input-padrao" required name="message"></textarea>
-                </p>
-                <p class="block">
-                    <button type="submit">Enviar</button>
-                </p>
-            </form>
+                <form action="https://formsubmit.co/el/tiyaso" method="POST">
+                    <!-- Campo oculto para evitar spam -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Redirigir a una página de agradecimiento después del envío -->
+                    <input type="hidden" name="_next" value="https://tusitio.com/thankyou.html">
+
+                    <p>
+                        <label for="nomesobrenome">Nombre y Apellidos</label>
+                        <input type="text" id="nomesobrenome" class="input-padrao" required name="full_name">
+                    </p>
+                    <p>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="input-padrao" required placeholder="juanperez@dominio.com"
+                            name="email">
+                    </p>
+                    <p>
+                        <label for="telefone">Teléfono</label>
+                        <input type="tel" id="telefone" class="input-padrao" required placeholder="(XXX) XXXX-XXXX"
+                            name="phone">
+                    </p>
+                    <p>
+                        <label for="product">Producto a consultar</label>
+                        <input type="text" id="product" name="product">
+                    </p>
+                    <p class="block">
+                        <label for="mensagem">Mensaje</label>
+                        <textarea cols="70" rows="10" id="mensagem" class="input-padrao" required
+                            name="message"></textarea>
+                    </p>
+                    <p class="block">
+                        <button type="submit">Enviar</button>
+                    </p>
+                </form>
             </div>
 
             
