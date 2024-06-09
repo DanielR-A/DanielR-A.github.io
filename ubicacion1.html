@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" href="img/22.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/Style.css">
+    <!-- Traemos jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+
+
+</head>
+
+<body>
+
+
+    <header>
+        <!-- Menú de navegación -->
+        <nav class="nav">
+            <div class="logo"><a href="index.html" title="Volver al inicio"><img src="img/22.png">
+                    <span>Stanf de Puerto Viejo</span></a></div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Servicos.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!--Principal-->
+
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="img/maps2.jpg" alt="First slide">
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------------------------------------------- -->
+
+
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+
+        }
+    </style>
+
+
+
+    <div id="map" style="margin-top: 20px;">
+        <script>
+            function initMap() {
+                // Coordenadas de Stanford's y Supermercado Diamante
+                var stanfords = { lat: 9.658132, lng: -82.752118 };
+
+
+                // Crear el mapa
+                var map = new google.maps.Map(
+                    document.getElementById('map'), { zoom: 15, center: stanfords });
+
+                // Agregar marcadores
+                var markerStanfords = new google.maps.Marker({ position: stanfords, map: map, title: 'Stanford\'s' });
+
+            }
+        </script>
+        <!-- Cargar la API de Google Maps -->
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUAkoaWW27Js3TI4iQuPawetzaz8_L944&libraries=geometry&callback=initMap"></script>
+
+    </div>
+
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+
+
+    <!-----------------------------------------Footer------------------------------------------>
+    <section class="footer" id="links">
+        <ul class="sci">
+            <li>
+                <a href="https://www.facebook.com/profile.php?id=61553926563357&is_tour_dismissed=true" target="_blank">
+                    <img src="./img/facebook.webp" alt="Imagen Facebook">
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/DanielR-A" target="_blank">
+                    <img src="./img/github.webp" alt="Imagen Github">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/stanfpuertoviejo/" target="_blank">
+                    <img src="./img/instagram.webp" alt="Imagen Instagram">
+                </a>
+            </li>
+        </ul>
+        <a target="_blank" class="appWhatsapp"
+            href="https://api.whatsapp.com/send?phone=50687461562&text=Hola Stanf de Pv,%20estoy%20interesad@%20en%20el%20Local%20de%20deAlquiler">
+            <img src="./img/whatsapp.webp" alt="icono de whatsapp">
+        </a>
+        <h4 class="copyrightText">Copyright ©2024 <a href="https://github.com" target="_blank">Daniel Rodríguez
+                Aguilar</a>.
+            All rights reserved.</h4>
+    </section>
+    <!-------------------------------------------------------- Bootstrap JavaScript Libraries ----------------------------------------------------------------------------------------------->
+    <!-------------------------------------------------------- Bootstrap JavaScript Libraries ----------------------------------------------------------------------------------------------->
+    <!-- NVAR -->
+    <script src="js/main.js"></script>
+    <script src="js/app.js" async></script>
+
+</body>
+
+</html>
