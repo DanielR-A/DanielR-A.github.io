@@ -196,6 +196,41 @@
         padding: 10px;
     }
 }
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* Existing styles for .small-button */
+.small-button {
+    position: absolute;
+    /* Position it absolutely within the modal-content */
+    bottom: 20px;
+    /* Distance from the bottom of the modal-content */
+    right: 20px;
+    /* Distance from the right side of the modal-content */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    /* Remove underline from text */
+    display: inline-block;
+    /* Ensure it behaves like a button */
+}
+
+.small-button:hover {
+    background-color: #0056b3;
+}
+
+.modal-content {
+    position: relative;
+    /* Make the modal-content a positioned container */
+}
+/* -------------------------------------------------------------------------------------------------------------- */
+
+
+
 /* -------------------------------------------------------------------------------------------------------------- */
 .menu1 {
     list-style: none;
